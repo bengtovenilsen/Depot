@@ -1,27 +1,11 @@
-#---
-# Excerpted from "Agile Web Development with Rails",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material, 
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose. 
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
-#---
-#---
-# Excerpted from "Agile Web Development with Rails, 4rd Ed.",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material, 
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose. 
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
-#---
 # be sure to change these
 set :user, 'u62793008'
-set :domain, 'www.asptail.com'
+set :domain, 'asptail.com'
 set :application, 'depot'
 
 # file paths
 set :repository,  "#{user}@#{domain}:git/#{application}.git" 
-set :deploy_to, "/#{user}/#{domain}" 
+set :deploy_to, "home/#{user}/#{domain}" 
 
 # distribute your applications across servers (the instructions below put them
 # all on the same server, defined above as 'domain', adjust as necessary)
@@ -41,7 +25,7 @@ role :db, domain, :primary => true
 # default_environment['GEM_PATH']='<your paths>:/usr/lib/ruby/gems/1.8'
 
 # miscellaneous options
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :scm, 'git'
 set :branch, 'master'
 set :scm_verbose, true

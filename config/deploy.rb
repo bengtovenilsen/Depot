@@ -25,7 +25,7 @@ role :db, domain, :primary => true
 # default_environment['GEM_PATH']='<your paths>:/usr/lib/ruby/gems/1.8'
 
 # miscellaneous options
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'master'
 set :scm_verbose, true

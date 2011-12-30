@@ -30,7 +30,7 @@ set :scm, 'git'
 set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false
-ssh_options[:forward_agent] = truesss
+ssh_options[:forward_agent] = true
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
